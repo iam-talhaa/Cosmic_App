@@ -1,4 +1,5 @@
 import 'package:cosmic_app/ui/Splash_screen.dart';
+import 'package:cosmic_app/ui/home.dart';
 import 'package:cosmic_app/ui/login.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,8 @@ class _CosmicState extends State<Cosmic> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Login(),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
     );
   }
 }

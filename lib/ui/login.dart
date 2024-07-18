@@ -111,15 +111,36 @@ class _LoginState extends State<Login> {
               Divider(
                 height: 2,
               ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image(height: 40, image: AssetImage('images/s.png')),
+                  SizedBox(width: 10),
+                  Image(height: 40, image: AssetImage('images/g.png')),
+                  SizedBox(width: 20),
                   Icon(
+                    size: 40,
                     Icons.facebook_outlined,
                     color: Colors.blue[400],
                   ),
-                  Icon(
-                    Icons.facebook_outlined,
-                    color: Colors.blue[400],
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Dont Have an Account? ",
+                    style: TextStyle(color: Color(0xff8D8E99)),
+                  ),
+                  Text(
+                    'SignUp',
+                    style: GoogleFonts.aBeeZee(color: Color(0xff11DCE8)),
                   )
                 ],
               )
