@@ -134,8 +134,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                           })),
                   Container(
-                    height: 450,
-                    width: 300,
+                    height: 580,
+                    width: 350,
                     child: ListView.builder(
                         itemCount: MySolorSystem.length,
                         itemBuilder: (BuildContext context, index) {
