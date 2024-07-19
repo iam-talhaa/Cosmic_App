@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cosmic_app/ui/innerPage.dart';
 import 'package:cosmic_app/ui/myContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -103,24 +104,33 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (BuildContext context, index) {
                             return Padding(
                               padding: const EdgeInsets.only(left: 7),
-                              child: MyContainer(
-                                  Myheight: 40.0,
-                                  Mywidth: 100.0,
-                                  mychild: Center(
-                                      child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 5),
-                                        child: Text(
-                                          MySolorSystem[index].toString(),
-                                          style: GoogleFonts.aBeeZee(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w800),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          InnerPage()));
+                                },
+                                child: MyContainer(
+                                    Myheight: 40.0,
+                                    Mywidth: 100.0,
+                                    mychild: Center(
+                                        child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 5),
+                                          child: Text(
+                                            MySolorSystem[index].toString(),
+                                            style: GoogleFonts.aBeeZee(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w800),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ))),
+                                      ],
+                                    ))),
+                              ),
                             );
                           })),
                   Container(

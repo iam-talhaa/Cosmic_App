@@ -1,3 +1,4 @@
+import 'package:cosmic_app/ui/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -96,12 +97,18 @@ class _LoginState extends State<Login> {
                         ]),
                     borderRadius: BorderRadius.circular(30)),
                 child: Center(
-                  child: Text(
-                    'Login',
-                    style: GoogleFonts.nokora(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => HomeScreen()));
+                    },
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.nokora(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                 ),
               ),
