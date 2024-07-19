@@ -15,6 +15,7 @@ class MyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('object');
     return Container(
       height: Myheight,
       width: Mywidth,
